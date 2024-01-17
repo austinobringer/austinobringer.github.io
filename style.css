@@ -1,0 +1,10 @@
+html {
+    /* Color Variables */
+    --menu-color: rgb(30,30,30);
+    --page-color: rgb(37,37,38);
+    --text-color: rgb(200, 200, 200);
+
+    background-color: var(--page-color);
+    color: var(--text-color);
+    font-family: monospace;
+}
