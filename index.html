@@ -1,1 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <link rel="stylesheet" href="style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TO-DO</title>
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <script src="https://kit.fontawesome.com/d648f75aa7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="side-bar side-bar-closed" id="sidebar">
+        <button class="side-bar-button side-bar-button-close" id="closeSidebar" onclick="toggle_side_bar()">&#60; &#9776;</button>
+        <nav class="side-bar-nav">
+            <ul class="side-bar-list">
+                <li class="side-bar-item side-bar-page-item"><a href="#" class="side-bar-link"><i class="fa-solid fa-house"></i> Home</a></li>
+            </ul>
+        </nav>
+        <hr class="side-bar-break">
+        <h1 class="side-bar-title">Recent Notes</h1>
+        <nav class="side-bar-nav">
+            <ul class="side-bar-list">
+                <li class="side-bar-item"><a href="#" class="side-bar-link">Note Name</a></li>
+                <li class="side-bar-item"><a href="#" class="side-bar-link">Add recent notes bar</a></li>
+                <li class="side-bar-item"><a href="#" class="side-bar-link">+</a></li>
+            </ul>
+        </nav>
+        <hr class="side-bar-break">
+        <h1 class="side-bar-title">Other Apps</h1>
+    </div>
+
+    <header class="top-bar" id="topbar">
+        <button class="side-bar-button side-bar-button-open" id="openSidebar" onclick="toggle_side_bar()">&#9776;</button>
+        <a href="index.html">
+            <img src="logo.png" class="logo" alt="TO-DO Logo" title="TO-DO" width="50" height="50">
+        </a>
+        <div class="title">
+            <a href="index.html" class="title-link">TO-DO</a>
+        </div>
+        <button class="top-bar-button" id="newNote"  title="Create a New Note" onclick="new_note()">&#43;</button>
+        <!-- <div class="top-bar-note-adder" id="noteAdderSection">
+            <button class="top-bar-note-adder-button" id="bulletButton"  title="Bulleted List" onclick="new_note()">&#x2022;</button>
+        </div> -->
+        <nav class="top-bar-nav">
+            <ul class="top-bar-list">
+                <li class="top-bar-item"><a href="#" class="top-bar-link">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <div class="formfield-center">
+            <label for="noteTitle" class="note-title-label">Title</label>
+            <textarea class="note-title" id="noteTitle" name="noteTitle" rows="1" maxlength="32" placeholder="Untitled Note"></textarea>
+            <button class="note-button-save" id="saveNote"  title="Save Note" onclick="save_note()"><i class="far fa-save"></i></button>
+        </div>
+        <textarea class="note-content" id="noteContent" name="noteContent" placeholder="Type your list/note here..."></textarea>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
